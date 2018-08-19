@@ -1,5 +1,5 @@
 # Best-Friend-Finder
-Everyone has friends.  We help you find a best friend. 
+Everyone has friends.  We help you find a best friend. We are going to use the Petfinder API to find you a best friend in your area!
 
 # The Assignment:
 
@@ -7,7 +7,11 @@ Everyone has friends.  We help you find a best friend.
 
 ### Overview
 
-In this activity, you'll build a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. 
+In this activity, you'll build a compatibility-based "FriendFinder" application -- basically a dating app(turned dog finder). This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. 
+
+** We are going to add MySQL storage for results redundancy so that we can limit our API calls to Petfinder. **
+
+
 
 You will use Express to handle routing. Make sure you deploy your app to Heroku so other users can fill it out.
 
