@@ -1,8 +1,17 @@
+@font-face {
+  font-family: goodDog;
+  src: url(lazy_dog.ttf);
+}
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px "goodDog", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.navbar-brand{
+  font-size: 2rem;
 }
