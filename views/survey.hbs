@@ -3,6 +3,22 @@
     <h2><b>Fill out our survey to find out what kind of dog suits you best!</b></h2>
     <form id="survey">
         <div class="container">
+            <!--
+            habitatSize: 3,
+            energy: 4,
+            independence: 8,
+            trainability: 4,
+            kids: 9,
+            otherDogs: 7,
+            temperment: 10,
+            loyalty: 7,
+            size: 4,
+            longevity: 8,
+            climate: 4 -->
+            <div class="form-group">
+                <label class="sliderLabel" for="habitatSize">How big is the living space your dog will have?<br> <span id="habitatVal">(ie - 4 hours)</span></label>
+                <input type="range" max="10" min="0" value="4" class="form-control-range" id="habitatSize" name="habitatSize">
+            </div>
             <div class="form-group">
                 <label class="sliderLabel" for="hours">How many hours a day will your dog be left at home alone?<br> <span id="hoursVal">(ie - 4 hours)</span></label>
                 <input type="range" max="8" min="0" value="4" class="form-control-range" id="hours" name="homeHours">
