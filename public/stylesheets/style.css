@@ -7,11 +7,35 @@ body {
   padding: 50px;
   font: 18px "goodDog", Helvetica, Arial, sans-serif;
 }
-
 a {
   color: #00B7FF;
 }
-
+.btn-info{
+  background-color:rgb(135, 119, 255);
+  border-color:rgb(120, 100, 245);
+}
+.btn-info:hover{
+  background-color:rgb(109, 96, 212);
+  border-color:rgb(135, 119, 255);
+}
+.btn-info:active, .btn-info:visited{
+  background-color:rgb(105, 88, 233);
+  border-color:rgb(164, 153, 253);
+}
+.main-content{
+  padding-top:100px;
+}
 .navbar-brand{
   font-size: 2rem;
+}
+.nav-custom{
+  background-color: rgb(90, 72, 153) !important;
+  -webkit-box-shadow: 0px 8px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 8px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 8px 5px 0px rgba(50, 50, 50, 0.75);
+  margin-bottom: 100px;
+}
+
+.sliderLabel{
+  font-size: 1.8rem;
 }

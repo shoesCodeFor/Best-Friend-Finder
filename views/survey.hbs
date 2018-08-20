@@ -1,14 +1,53 @@
-<div class="text-center">
+<div class="text-center main-content">
 
-    <h3>Fill out our survey to find out what kind of dog suits you best!</h3>
-    <form>
-        <div class="form-group">
-            <label for="formControlRange">Example Range input</label>
-            <input type="range" class="form-control-range" id="formControlRange">
+    <h2><b>Fill out our survey to find out what kind of dog suits you best!</b></h2>
+    <form id="survey">
+        <div class="container">
+            <div class="form-group">
+                <label class="sliderLabel" for="hours">How many hours a day will your dog be left at home alone?<br> <span id="hoursVal">(ie - 4 hours)</span></label>
+                <input type="range" max="8" min="0" value="4" class="form-control-range" id="hours" name="homeHours">
+            </div>
+            <div class="form-group">
+                <label class="sliderLabel" for="excercise">How much excercise will your dog get daily?<br> <span id="excerciseVal">(ie - less than 30 mins)</span></label>
+                <input type="range" max="2" min="0" value="1" class="form-control-range" id="excercise" name="excerciseHours">
+            </div>
         </div>
+        <button id="formSubmission" type="submit" class="btn btn-lg btn-info">
+        <i class="fab fa-wpforms"></i> Submit
+        </button>
     </form>
 
-    <a href="/survey" class="btn btn-success btn-lg">
-        <i class="fab fa-wpforms"></i> Submit
-    </a>
+    
+    <script>
+        $('#hours').on("change", function (){
+            console.log($(this).val());
+            let hrs = $(this).val();
+            if(hrs > 7){
+                $('#hoursVal').text(`${hrs}+ Hours`);
+            }
+            else{
+                $('#hoursVal').text(`${hrs} Hours`);
+            } 
+        });
+        $('#excercise').on("change", function (){
+            console.log($(this).val());
+            let hrs = $(this).val();
+            if(hrs > 1){
+                $('#excerciseVal').text(`1 hour or more a day`);
+            }
+            else if(hrs == 1)
+            {
+                $('#excerciseVal').text(`~30 mins a day`);
+            }
+            else
+            {
+                $('#excerciseVal').text(`I want a lazy dog!`);
+            } 
+        });
+        $("#formSubmission").on('click', function (e){
+            event.preventDefault();
+            console.log( $('form').serialize() );
+        });
+           
+    </script>
 </div>
