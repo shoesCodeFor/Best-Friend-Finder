@@ -1,5 +1,5 @@
-const DogBreeds = [
-    {
+function Animals(){
+    this.dogs = [{
         name: "Golden Retriever",
         habitatSize: 8,
         energy:7,
@@ -88,7 +88,9 @@ const DogBreeds = [
         longevity: 8,
         climate: 4,
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Mops-duke-mopszucht-vom-maegdebrunnen.jpg/330px-Mops-duke-mopszucht-vom-maegdebrunnen.jpg" 
-    },
-];
+    }
+]}
 
-module.export = DogBreeds;
+module.exports = Animals;
+    
+
