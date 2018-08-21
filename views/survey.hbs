@@ -5,28 +5,83 @@
         <div class="container">
             <!--
             habitatSize: 3,
-            energy: 4,
-            independence: 8,
-            trainability: 4,
-            kids: 9,
-            otherDogs: 7,
-            temperment: 10,
-            loyalty: 7,
-            size: 4,
-            longevity: 8,
-            climate: 4 -->
+            -->
             <div class="form-group">
-                <label class="sliderLabel" for="habitatSize">How big is the living space your dog will have?<br> <span id="habitatVal">(ie - 4 hours)</span></label>
-                <input type="range" max="10" min="0" value="4" class="form-control-range" id="habitatSize" name="habitatSize">
+                <label class="sliderLabel" for="habitatSize">How big is the living space your dog will have?<br> <span id="habitatVal">(ex: 1 bedroom apartment)</span></label>
+                <input type="range" max="5" min="1" value="3" class="form-control-range" id="habitatSize" name="habitatSize">
             </div>
+            <!--
+            energy: 4,
+            -->
             <div class="form-group">
+                <label class="sliderLabel" for="energy">How much energy are expecting your new pet to have?<br> <span id="energyVal">(ex: 0 = Sleeps All Day - 10 = Plays all day)</span></label>
+                <input type="range" max="10" min="1" value="5" class="form-control-range" id="energy" name="energy">
+            </div>
+            <!--
+            independence: 8,
+            -->
+            <div class="form-group">
+                <label class="sliderLabel" for="independence">How many hours a day will your pet be home alone?<br> <span id="independenceVal">(ex - 4 hours)</span></label>
+                <input type="range" max="10" min="1" value="5" class="form-control-range" id="independence" name="independence">
+            </div>
+            <!--
+            trainability: 4,
+            -->
+            <div class="form-group">
+                <label class="sliderLabel" for="trainability">How trainable would you like your pet to be?<br> <span id="habitatVal">(ex - 4 hours)</span></label>
+                <input type="range" max="10" min="1" value="5" class="form-control-range" id="independence" name="independence">
+            </div>
+            <!--
+            kids: Selector?
+            -->
+            {{!-- <div class="form-group">
                 <label class="sliderLabel" for="hours">How many hours a day will your dog be left at home alone?<br> <span id="hoursVal">(ie - 4 hours)</span></label>
                 <input type="range" max="8" min="0" value="4" class="form-control-range" id="hours" name="homeHours">
-            </div>
-            <div class="form-group">
+            </div> --}}
+            <!-- 
+            otherDogs: Slider
+            -->
+            {{!-- <div class="form-group">
+                <label class="sliderLabel" for="hours">How many hours a day will your dog be left at home alone?<br> <span id="hoursVal">(ie - 4 hours)</span></label>
+                <input type="range" max="8" min="0" value="4" class="form-control-range" id="hours" name="homeHours">
+            </div> --}}
+            <!--
+            temperment: Slider
+            -->
+            {{!-- <div class="form-group">
                 <label class="sliderLabel" for="excercise">How much excercise will your dog get daily?<br> <span id="excerciseVal">(ie - less than 30 mins)</span></label>
                 <input type="range" max="2" min="0" value="1" class="form-control-range" id="excercise" name="excerciseHours">
-            </div>
+            </div> --}}
+            <!--
+            loyalty: Slider
+            -->
+            {{!-- <div class="form-group">
+                <label class="sliderLabel" for="excercise">How much excercise will your dog get daily?<br> <span id="excerciseVal">(ie - less than 30 mins)</span></label>
+                <input type="range" max="2" min="0" value="1" class="form-control-range" id="excercise" name="excerciseHours">
+            </div>     --}}
+            <!--
+            size: Slider
+            -->
+            {{!-- <div class="form-group">
+                <label class="sliderLabel" for="excercise">How much excercise will your dog get daily?<br> <span id="excerciseVal">(ie - less than 30 mins)</span></label>
+                <input type="range" max="2" min="0" value="1" class="form-control-range" id="excercise" name="excerciseHours">
+            </div> --}}
+            <!-- 
+            longevity: 8,
+            -->
+            {{!-- <div class="form-group">
+                <label class="sliderLabel" for="excercise">How much excercise will your dog get daily?<br> <span id="excerciseVal">(ie - less than 30 mins)</span></label>
+                <input type="range" max="2" min="0" value="1" class="form-control-range" id="excercise" name="excerciseHours">
+            </div> --}}
+            <!--
+            climate: 4 -->
+            {{!-- <div class="form-group">
+                <label class="sliderLabel" for="excercise">How much excercise will your dog get daily?<br> <span id="excerciseVal">(ie - less than 30 mins)</span></label>
+                <input type="range" max="2" min="0" value="1" class="form-control-range" id="excercise" name="excerciseHours">
+            </div> --}}
+            
+            
+            
         </div>
         <button id="formSubmission" type="submit" class="btn btn-lg btn-info">
         <i class="fab fa-wpforms"></i> Submit

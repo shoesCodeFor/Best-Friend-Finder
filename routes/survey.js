@@ -7,6 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
+    let userForm = req.params.formData;
+    console.log(req.params);
     res.redirect('/results');
 });
 
