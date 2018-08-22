@@ -148,7 +148,12 @@
         });
         $("#formSubmission").on('click', function (e){
             event.preventDefault();
-            console.log( $('form').serializeObject() );
+            let userForm = $('#survey').serializeObject();
+            console.log(userForm);
+            $.post('/survey', userForm, function (data, status){
+                console.log(data);
+                console.log(status);
+            });
         });
            
     </script>

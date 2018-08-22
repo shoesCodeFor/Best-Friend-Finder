@@ -7,9 +7,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    let userForm = req.params.formData;
-    console.log(req.params);
-    res.redirect('/results');
+    let userForm = req.body;
+    console.log("The survey route was hit");
+    console.log(req.body);
+    console.log(userForm);
+    // Pass this data along to the matcher function
+
+    res.redirect('../results');
+
 });
 
 module.exports = router;
