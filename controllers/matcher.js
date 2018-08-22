@@ -47,3 +47,7 @@ const createScorecard = (form) =>{
 createScorecard(testForm);
 
 
+module.exports = {
+    createScorecard: createScorecard
+
+}

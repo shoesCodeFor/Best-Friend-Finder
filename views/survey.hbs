@@ -3,101 +3,132 @@
     <h2><b>Fill out our survey to find out what kind of dog suits you best!</b></h2>
     <form id="survey">
         <div class="container">
-            <!--
-            habitatSize: 3,
-            -->
+            <!-- habitatSize -->
             <div class="form-group">
-                <label class="sliderLabel" for="habitatSize">How big is the living space your dog will have?<br> <span id="habitatVal">(ex: 1 bedroom apartment)</span></label>
-                <input type="range" max="5" min="1" value="3" class="form-control-range" id="habitatSize" name="habitatSize">
+                <label class="sliderLabel" for="habitatSize">How big is the living space your dog will have?<br> <span id="habitatVal">(ex: A small house)</span></label>
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="habitatSize" name="habitatSize">
             </div>
-            <!--
-            energy: 4,
-            -->
+            <!-- energy -->
             <div class="form-group">
-                <label class="sliderLabel" for="energy">How much energy are expecting your new pet to have?<br> <span id="energyVal">(ex: 0 = Sleeps All Day - 10 = Plays all day)</span></label>
-                <input type="range" max="10" min="1" value="5" class="form-control-range" id="energy" name="energy">
+                <label class="sliderLabel" for="energy">How much energy are expecting your new pet to have?<br> <span id="energyVal">(ex: 50 minutes of okay a day)</span></label>
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="energy" name="energy">
             </div>
-            <!--
-            independence: 8,
-            -->
+            <!-- independence -->
             <div class="form-group">
-                <label class="sliderLabel" for="independence">How many hours a day will your pet be home alone?<br> <span id="independenceVal">(ex - 4 hours)</span></label>
-                <input type="range" max="10" min="1" value="5" class="form-control-range" id="independence" name="independence">
+                <label class="sliderLabel" for="independence">How many hours a day will your pet be home alone?<br> <span id="independenceVal">(ex - 4.5 hours a day)</span></label>
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="independence" name="independence">
             </div>
-            <!--
-            trainability: 4,
-            -->
+            <!-- trainability -->
             <div class="form-group">
-                <label class="sliderLabel" for="trainability">How trainable would you like your pet to be?<br> <span id="habitatVal">(ex - 4 hours)</span></label>
-                <input type="range" max="10" min="1" value="5" class="form-control-range" id="independence" name="independence">
+                <label class="sliderLabel" for="trainability">How trainable would you like your pet to be?<br> <span id="trainabilityVal">(ex - 4 hours)</span></label>
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="trainability" name="trainability">
             </div>
-            <!--
-            kids: Selector?
-            -->
+            <!-- kids -->
             <div class="form-group">
                 <label class="sliderLabel" for="kids">Will your dog be playing wit kids?<br> <span id="kidsVal">(ex: The dog will play with kids sometimes)</span></label>
-                <input type="range" max="5" min="1" value="3" class="form-control-range" id="kids" name="kids">
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="kids" name="kids">
             </div>
-            <!-- 
-            otherDogs: Slider
-            -->
+            <!-- otherDogs -->
             <div class="form-group">
                 <label class="sliderLabel" for="otherDogs">Will your dog be playing with other dogs?<br> <span id="otherDogsVal">(ex: Yes, we have one dog)</span></label>
-                <input type="range" max="5" min="1" value="3" class="form-control-range" id="otherDogs" name="otherDogs">
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="otherDogs" name="otherDogs">
             </div>
-            <!--
-            temperment: Slider
-            -->
+            <!-- temperment -->
             <div class="form-group">
-                <label class="sliderLabel" for="temperment">How friendly do you want your pet to be?<br> <span id="excerciseVal">(ex: Very nice)</span></label>
-                <input type="range" max="10" min="1" value="5" class="form-control-range" id="excercise" name="excerciseHours">
+                <label class="sliderLabel" for="temperment">How friendly do you want your pet to be?<br> <span id="tempermentVal">(ex: Very nice)</span></label>
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="temperment" name="temperment">
             </div>
-            <!--
-            loyalty: Slider
-            -->
+            <!-- loyalty -->
             <div class="form-group">
                 <label class="sliderLabel" for="loyalty">How much excercise will your dog get daily?<br> <span id="loyaltyVal">(ie - less than 30 mins)</span></label>
-                <input type="range" max="10" min="1" value="5" class="form-control-range" id="loyalty" name="loyalty">
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="loyalty" name="loyalty">
             </div>    
-            <!--
-            size: Slider
-            -->
+            <!-- size: -->
             <div class="form-group">
-                <label class="sliderLabel" for="size">How big of a dog are you looking for?<br> <span id="excerciseVal">(ex: medium, like an English Bulldog)</span></label>
-                <input type="range" max="2" min="0" value="1" class="form-control-range" id="size" name="size">
+                <label class="sliderLabel" for="size">How big of a dog are you looking for?<br> <span id="sizeVal">(ex: medium, like an English Bulldog)</span></label>
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="size" name="size">
             </div>
-            <!-- 
-            longevity: 8,
-            -->
+            <!-- longevity -->
             <div class="form-group">
                 <label class="sliderLabel" for="longevity">How many years do you expect your dog to live for?<br> <span id="longevityVal">(ie - less than 30 mins)</span></label>
-                <input type="range" max="2" min="0" value="1" class="form-control-range" id="longevity" name="longevity">
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="longevity" name="longevity">
             </div>
-            <!--
-            climate: 4 -->
+            <!-- climate -->
             <div class="form-group">
                 <label class="sliderLabel" for="climate">What kind of weather climate to you live in?<br> <span id="climateVal">(ex: 60 degrees F year round)</span></label>
-                <input type="range" max="10" min="0" value="5" class="form-control-range" id="climate" name="climate">
+                <input type="range" max="100" min="1" value="50" class="form-control-range" id="climate" name="climate">
             </div>
-            
-            
             
         </div>
         <button id="formSubmission" type="submit" class="btn btn-lg btn-info">
-        <i class="fab fa-wpforms"></i> Submit
+            <i class="fab fa-wpforms"></i> Submit
         </button>
     </form>
 
     
     <script>
-        $('#hours').on("change", function (){
+        $.fn.serializeObject = function() {
+        var o = {};
+        var a = this.serializeArray();
+            $.each(a, function() {
+                if (o[this.name]) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value/10 || '');
+                } else {
+                    o[this.name] = this.value/10 || '';
+                }
+            });
+            return o;
+        };
+
+        $('#habitatSize').on("change", function (){
             console.log($(this).val());
-            let hrs = $(this).val();
-            if(hrs > 7){
-                $('#hoursVal').text(`${hrs}+ Hours`);
+            let sz = $(this).val();
+            if(sz >= 91 && sz <= 100){
+                $('#habitatVal').text(`A large house/farm with land`);
+            }
+            else if(sz >= 61 && sz < 90){
+                $('#habitatVal').text(`A large house 1${sz-10}0 - 2${sz-10}0 sq ft with a yard`);
+            }
+            else if(sz >= 41 && sz < 60){
+                $('#habitatVal').text(`A house < 1${sz-10}0 sq ft`);
+            }
+            else if(sz >= 20 && sz < 40){
+                $('#habitatVal').text(`Townhome < 1${sz-10}0 sq ft`);
+            }
+            else if(sz >= 10 && sz < 20){
+                $('#habitatVal').text(`Small Apartment < ${sz*70} sq ft`);
             }
             else{
-                $('#hoursVal').text(`${hrs} Hours`);
+                $('#habitatVal').text(`Studio Apartment`);
+            } 
+        });
+        $('#energy').on("change", function (){
+            console.log($(this).val());
+            let e = $(this).val();
+            if(e > 90){
+                $('#energyVal').text(`Endless energy`);
+            }
+            else if(e >= 10 && e < 90){
+                $('#energyVal').text(`${e} minutes of play per day`);
+            }
+            else{
+                $('#energyVal').text(`I want a lazy dog`);
+            } 
+        });
+        $('#independence').on("change", function (){
+            console.log($(this).val());
+            let i = $(this).val();
+            if(i >= 85 && i <= 100){
+                $('#independenceVal').text(`Home alone more than 8 hrs a day (not recommended)`);
+            }
+            else if(i >= 11 && i < 85){
+                $('#independenceVal').text(`Home alone ${((i/10)*.94).toFixed(1)} hrs a day`);
+            }
+            else{
+                $('#independenceVal').text(`The dog will be with you all the time`);
             } 
         });
         $('#excercise').on("change", function (){
@@ -117,7 +148,7 @@
         });
         $("#formSubmission").on('click', function (e){
             event.preventDefault();
-            console.log( $('form').serialize() );
+            console.log( $('form').serializeObject() );
         });
            
     </script>
