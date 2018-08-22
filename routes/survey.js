@@ -12,9 +12,8 @@ router.post('/', function(req, res, next) {
     console.log(req.body);
     console.log(userForm);
     // Pass this data along to the matcher function
-
-    res.redirect('../results');
-
+    // app.set('currentSearch', userForm);
+    res.redirect(200, '../results/');
 });
 
 module.exports = router;
