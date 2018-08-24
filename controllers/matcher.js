@@ -1,6 +1,8 @@
 const Animals = require ('../models/breeds');
 const Survey= require('../models/userSurvey');
 var breeds = new Animals();
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
 
 var testForm = {
     habitatSize:10,
@@ -19,8 +21,9 @@ var testForm = {
 
 const createScorecard = (form) =>{
     let survey = new Survey(form);
-    let overallScores = [];
     let singleScore = [];
+    let overallScores = [];
+    let reducedScore = 0;
     let keys = Object.keys(breeds.dogs[0]);
     keys.shift();
     keys.pop();
@@ -40,8 +43,23 @@ const createScorecard = (form) =>{
             
         }
         // console.log(singleScore);
-        overallScores.push(singleScore);
+        // overallScores.push(singleScore);
+        console.log('Reduced Value');
+        reducedScore = singleScore.reduce(reducer)
+        console.log(reducedScore);
+        overallScores.push(reducedScore);
+        breeds.dogs[i].matchScore = reducedScore;
+        singleScore = [];
     }
+    
+    console.log(overallScores);
+    // What the min
+    console.log(Math.min(...overallScores));
+    // Whats the index of the min
+    let indexOfMin = overallScores.indexOf(Math.min(...overallScores))
+    console.log();
+    // what dog is there
+    console.log(breeds.dogs[indexOfMin]);
 };
 
 createScorecard(testForm);

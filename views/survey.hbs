@@ -150,9 +150,19 @@
             event.preventDefault();
             let userForm = $('#survey').serializeObject();
             console.log(userForm);
-            $.post('/survey', userForm, function (data, status){
-                console.log(data);
-                console.log(status);
+            // $.post('/survey', userForm, function (){
+                // console.log(data);
+                // $(location).attr('href', data);
+                // console.log(status);
+                // console.log("Thanks for the post!");
+            // });
+            $.ajax({
+                method: "POST",
+                url: "/survey",
+                data: userForm
+            })
+            .then(function( data ) {
+                $(location).attr('href', data);
             });
         });
            
