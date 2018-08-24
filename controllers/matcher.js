@@ -60,9 +60,9 @@ const createScorecard = (form) =>{
     console.log();
     // what dog is there
     console.log(breeds.dogs[indexOfMin]);
+    return indexOfMin;
 };
 
-createScorecard(testForm);
 
 
 module.exports = {

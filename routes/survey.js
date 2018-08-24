@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const matcher = require('../controllers/matcher.js');
 
 /* GET survey page. */
 router.get('/', function(req, res, next) {
@@ -15,7 +16,8 @@ router.post('/', function(req, res, next) {
     // req.session['currentSearch'] = userForm;
     // Pass this data along to the matcher function
     // app.set('currentSearch', userForm);
-    res.send('../results/12');
+    let dogID = matcher.createScorecard(userForm);
+    res.send(`../results/${dogID}`);
     // res.render('results', {userData: userForm});
     // res.redirect(200, '../results/');
     // router.get('/results', {message: "SOme Message"});
