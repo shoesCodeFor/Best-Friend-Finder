@@ -20,7 +20,7 @@
             </div>
             <!-- trainability -->
             <div class="form-group">
-                <label class="sliderLabel" for="trainability">How trainable would you like your pet to be?<br> <span id="trainabilityVal">(ex - 4 hours)</span></label>
+                <label class="sliderLabel" for="trainability">How trainable would you like your pet to be?<br> <span id="trainabilityVal">(ie - I want my dog to learn some tricks)</span></label>
                 <input type="range" max="100" min="1" value="50" class="form-control-range" id="trainability" name="trainability">
             </div>
             <!-- kids -->
@@ -40,7 +40,7 @@
             </div>
             <!-- loyalty -->
             <div class="form-group">
-                <label class="sliderLabel" for="loyalty">How much excercise will your dog get daily?<br> <span id="loyaltyVal">(ie - less than 30 mins)</span></label>
+                <label class="sliderLabel" for="loyalty">How loyal (protective) would you like your dog to be?<br> <span id="loyaltyVal">(ie - less than 30 mins)</span></label>
                 <input type="range" max="100" min="1" value="50" class="form-control-range" id="loyalty" name="loyalty">
             </div>    
             <!-- size: -->
@@ -50,7 +50,7 @@
             </div>
             <!-- longevity -->
             <div class="form-group">
-                <label class="sliderLabel" for="longevity">How many years do you expect your dog to live for?<br> <span id="longevityVal">(ie - less than 30 mins)</span></label>
+                <label class="sliderLabel" for="longevity">How many years do you expect your dog to live for?<br> <span id="longevityVal">6-8 years</span></label>
                 <input type="range" max="100" min="1" value="50" class="form-control-range" id="longevity" name="longevity">
             </div>
             <!-- climate -->
@@ -131,19 +131,137 @@
                 $('#independenceVal').text(`The dog will be with you all the time`);
             } 
         });
-        $('#excercise').on("change", function (){
+        $('#trainability').on("change", function (){
             console.log($(this).val());
-            let hrs = $(this).val();
-            if(hrs > 1){
-                $('#excerciseVal').text(`1 hour or more a day`);
+            let skillz = $(this).val();
+            if(skillz > 80){
+                $('#trainabilityVal').text(`I want a genius dog!`);
             }
-            else if(hrs == 1)
+            else if(skillz > 40 && skillz < 79)
             {
-                $('#excerciseVal').text(`~30 mins a day`);
+                $('#trainabilityVal').text(`I want to teach my dog a few tricks`);
+            }
+            else if(skillz > 10 && skillz < 41)
+            {
+                $('#trainabilityVal').text(`I want to teach my dog to sit and shake`);
             }
             else
             {
-                $('#excerciseVal').text(`I want a lazy dog!`);
+                $('#trainabilityVal').text(`I don't care if they're not so bright.`);
+            } 
+        });
+        $('#kids').on("change", function (){
+            console.log($(this).val());
+            let kiddos = $(this).val();
+            if(kiddos > 80){
+                $('#kidsVal').text(`I want my kids to be able to play rough with our dog.`);
+            }
+            else if(skillz > 50 && skillz < 81)
+            {
+                $('#kidsVal').text(`I want the dog to be comfortable around kids.`);
+            }
+            else if(skillz > 30 && skillz < 51)
+            {
+                $('#kidsVal').text(`I want my dog to tolerate kids.`);
+            }
+            else
+            {
+                $('#kidsVal').text(`My dog will not be around children.`);
+            } 
+        });
+        $('#otherDogs').on("change", function (){
+            console.log($(this).val());
+            let dogs = $(this).val();
+            if(dogs > 85){
+                $('#otherDogsVal').text(`I want my dog to be able to play with any dog.`);
+            }
+            else if(dogs > 60 && dogs < 85)
+            {
+                $('#otherDogsVal').text(`I want my dog to get along with well-behaved dogs.`);
+            }
+            else if(dogs > 50 && dogs < 61)
+            {
+                $('#otherDogsVal').text(`I want my dog to get along with the dogs in our household.`);
+            }
+            else if(dogs > 30 && dogs < 51)
+            {
+                $('#otherDogsVal').text(`My dog will rarely be around other dogs.`);
+            }
+            else if(dogs > 15 && dogs < 31)
+            {
+                $('#otherDogsVal').text(`My dog will not be around other dogs`);
+            }
+            else
+            {
+                $('#otherDogsVal').text(`I can handle a dog that is dog-aggressive.`);
+            } 
+        });
+        $('#temperment').on("change", function (){
+            console.log($(this).val());
+            let temper = $(this).val();
+            if(temper > 80){
+                $('#tempermentVal').text(`My dog is happy all the time!`);
+            }
+            else if(temper > 50 && temper < 79)
+            {
+                $('#tempermentVal').text(`My dog is happy most of the time`);
+            }
+            else if(temper > 30 && temper < 51)
+            {
+                $('#tempermentVal').text(`My dog is oblivious`);
+            }
+            else
+            {
+                $('#tempermentVal').text(`My doesn't care about anything`);
+            } 
+        });
+        $('#loyalty').on("change", function (){
+            console.log($(this).val());
+            let loyal = $(this).val();
+            if(loyal > 85){
+                $('#loyaltyVal').text(`My dog is only likes me!`);
+            }
+            else if(loyal > 50 && loyal < 85)
+            {
+                $('#loyaltyVal').text(`I want my dog to love me and those who are close to me`);
+            }
+            else if(loyal > 30 && loyal < 51)
+            {
+                $('#loyaltyVal').text(`I want my dog to get along with the dogs in our household.`);
+            }
+            else if(loyal > 10 && loyal < 31)
+            {
+                $('#loyaltyVal').text(`I want my dog to bark at strangers.`);
+            }
+            else
+            {
+                $('#loyaltyVal').text(`My dog wouldn't protect me from a burglar.`);
+            } 
+        });
+        $('#size').on("change", function (){
+            console.log($(this).val());
+            let sz = $(this).val();
+            if(sz >= 95 && sz <= 100){
+                $('#sizeVal').text(`A large dog (more than 140 lbs)`);
+            }
+            else if(sz >= 10 && sz < 95){
+                $('#sizeVal').text(`~ ${sz*0.9} lbs - ${sz*1.2} lbs`);
+            }
+            else{
+                $('#sizeVal').text(`Only tiny dogs for you (less than 10 lbs)`);
+            } 
+        });
+        $('#longevity').on("change", function (){
+            console.log($(this).val());
+            let lng = $(this).val();
+            if(lng >= 90 && lng <= 100){
+                $('#longevityVal').text(`You want a dog that will live more than 12 years`);
+            }
+            else if(lng >= 10 && lng < 90){
+                $('#longevityVal').text(`~ ${Number.parseInt(lng*0.11)} year - ${Number.parseInt(lng*.14)} years`);
+            }
+            else{
+                $('#longevityVal').text(`Age is only a number.`);
             } 
         });
         $("#formSubmission").on('click', function (e){
