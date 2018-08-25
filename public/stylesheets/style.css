@@ -10,6 +10,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+.btn-bd{
+  font-weight: 500;
+  color: #ffe484;
+  border-color: #ffe484;
+}
+
+.btn-bd:hover{
+  color: #faf4e1;
+}
+
 .btn-info{
   background-color:rgb(135, 119, 255);
   border-color:rgb(120, 100, 245);
@@ -34,6 +45,10 @@ a {
   -moz-box-shadow:    0px 8px 5px 0px rgba(50, 50, 50, 0.75);
   box-shadow:         0px 8px 5px 0px rgba(50, 50, 50, 0.75);
   margin-bottom: 100px;
+}
+
+.scorecard{
+  font-size: 2.25rem;
 }
 
 .sliderLabel{

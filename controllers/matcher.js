@@ -3,20 +3,11 @@ const Survey= require('../models/userSurvey');
 var breeds = new Animals();
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
+let keys = Object.keys(breeds.dogs[0]);
+keys.shift();
+keys.pop();
 
-var testForm = {
-    habitatSize:10,
-    energy:8,
-    'independence':6,
-    'trainability':6,
-    'kids':4,
-    'otherDogs':6,
-    'temperment':9,
-    'loyalty':6,
-    'size':4,
-    'longevity':4,
-    'climate':4
-}
+
 
 
 const createScorecard = (form) =>{
@@ -24,9 +15,7 @@ const createScorecard = (form) =>{
     let singleScore = [];
     let overallScores = [];
     let reducedScore = 0;
-    let keys = Object.keys(breeds.dogs[0]);
-    keys.shift();
-    keys.pop();
+    
     console.log(keys);
     for(var i = 0; i < breeds.dogs.length; i++){
         let dog = breeds.dogs[i];
@@ -35,7 +24,7 @@ const createScorecard = (form) =>{
         for(var j = 0; j < keys.length; j++){
             // Start building a match score
             let score = Math.abs(survey[keys[j]] - dog[keys[j]]);
-            
+            score = Number.parseInt(score.toFixed(2));
             singleScore.push(score);
             console.log(`Dog: ${dog[keys[j]]}`);
             console.log(`Survey: ${survey[keys[j]]}`);

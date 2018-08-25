@@ -5,19 +5,49 @@
         <hr>
         <h3>Here are the dogs you match best with.</h3>
         <div class="text-center">
-            <h2>{{dog.name}}</h2>
-            <img src="{{dog.image}}">
-            <ul>
-                <li></li>
+            <h2 id="dogFromSearch">{{dog.name}}</h2>
+            <img class="img-fluid" src="{{dog.image}}">
+            <div class="row justify-content-center">
+                <ul id="" class="scorecard col-md-6 list-group">
+                <li class="list-group-item">Habitat Size Requirements <span class="badge badge-primary badge-pill">{{dog.habitatSize}}</span></li>
+                <li class="list-group-item">Energy <span class="badge badge-primary badge-pill">{{dog.energy}}</span></li>
+                <li class="list-group-item">Independence <span class="badge badge-primary badge-pill">{{dog.independence}}</span></li>
+                <li class="list-group-item">Trainability <span class="badge badge-primary badge-pill">{{dog.trainability}}</span></li>
+                <li class="list-group-item">Good with kids <span class="badge badge-primary badge-pill">{{dog.kids}}</span></li>
+                <li class="list-group-item">Gets along with other dogs <span class="badge badge-primary badge-pill">{{dog.otherDogs}}</span></li>
+                <li class="list-group-item">Temperment <span class="badge badge-primary badge-pill">{{dog.temperment}}</span></li>
+                <li class="list-group-item">Loyalty <span class="badge badge-primary badge-pill">{{dog.loyalty}}</span></li>
+                <li class="list-group-item">Size <span class="badge badge-primary badge-pill">{{dog.size}}</span></li>
+                <li class="list-group-item">Longevity <span class="badge badge-primary badge-pill">{{dog.longevity}}</span></li>
+                <li class="list-group-item">Climate <span class="badge badge-primary badge-pill">{{dog.climate}}</span></li>
             </ul>
-            <button class="btn btn-primary">Search to Adopt this Dog</button>   
+            
+            </div>
+            <div class="row justify-content-center">
+                <button class="btn btn-primary">Search to Adopt this Dog</button> 
+            </div>  
         </div>
         
     </div>
 </div>
 
 <script>
-    fetch("https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json&formatversion=2").then(data =>{
+    
+    $( document ).ready(function(){
+        let dogWikiSearch = $('#dogFromSearch').text();
+        console.log(dogWikiSearch);
+        $('nav.navbar').append(`<a class="btn btn-bd d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" 
+        href="../survey">Search Again</a>`);
+        // getWiki(dogWikiSearch);
+    });
+    /*
+    function getWiki(dogWikiSearch){
+        $.get(`https://en.wikipedia.org/w/api.php?action=query&titles=${dogWikiSearch}&prop=revisions&rvprop=content&format=json&formatversion=2`, 
+        data =>{
         console.log(data);
-    })
+        });
+    }
+    */
+    
+    
 </script>
