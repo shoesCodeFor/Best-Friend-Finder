@@ -264,6 +264,29 @@
                 $('#longevityVal').text(`Age is only a number.`);
             } 
         });
+        $('#climate').on("change", function (){
+            console.log($(this).val());
+            let climate = $(this).val();
+            if(climate >= 90 && climate <= 100){
+                $('#climateVal').text(`You want a dog that likes the heat!`);
+            }
+            else if(climate > 50 && climate < 90)
+            {
+                $('#climateVal').text(`Mostly warm weather.`);
+            }
+            else if(climate > 30 && climate < 51)
+            {
+                $('#climateVal').text(`We have complete seasons a winter and summer time.`);
+            }
+            else if(climate > 10 && climate < 31)
+            {
+                $('#climateVal').text(`More cold weather than warm.`);
+            }
+            else
+            {
+                $('#climateVal').text(`It's cold where I live most of the time.`);
+            }  
+        });
         $("#formSubmission").on('click', function (e){
             event.preventDefault();
             let userForm = $('#survey').serializeObject();
